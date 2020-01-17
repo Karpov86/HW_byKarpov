@@ -1,11 +1,19 @@
 package by.karpov.service;
 
 import by.karpov.entity.Patient;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class PatientRegistrationServiceImpl implements PatientRegistrationService {
     @Override
     public boolean register(Patient patient) {
         //business logic
-        return false;
+        LocalDate localDate = LocalDate.now();
+        Date birthDate = patient.getBirthDate();
+        int age = birthDate.getYear() - localDate.getYear();
+        if (patient.getInsurance() == null && age < 18) {
+            return false;
+        }
+        return true;
     }
 }

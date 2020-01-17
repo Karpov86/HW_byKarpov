@@ -2,30 +2,57 @@ package by.karpov.entity;
 
 public class Clinic {
 
+    private String name;
+    private String address;
+    private String helpDeskTelephoneNumber;
+    private String callADoctorAtHomeTelephoneNumber;
+    private String paidServicesTelephoneNumber;
 
-    //info about particular clinic
-    //адресс, телефон, геолокация и т.д.
+    public Clinic(String name, String address, String helpDeskTelephoneNumber, String callADoctorAtHomeTelephoneNumber, String paidServicesTelephoneNumber) {
+        this.name = name;
+        this.address = address;
+        this.helpDeskTelephoneNumber = helpDeskTelephoneNumber;
+        this.callADoctorAtHomeTelephoneNumber = callADoctorAtHomeTelephoneNumber;
+        this.paidServicesTelephoneNumber = paidServicesTelephoneNumber;
+    }
 
-    //move to services
-    /*public static boolean patientRegistration(Patient patient, Map<Integer, Patient> patients){
+    public String getName() {
+        return name;
+    }
 
-        boolean confirmation = false;
-        Map<Integer, Patient> map = new HashMap<>(patients);
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        if(map.put(patient.getMedicalInsurance(),patient)==null){
-            patients.put(patient.getMedicalInsurance(),patient);
-            confirmation = true;
-        } else{
-            System.out.println("Клиент с таким номером медецинской страховки уже существует.");
-        }
-        return confirmation;
-    }*/
+    public String getAddress() {
+        return address;
+    }
 
-    public static void appointmentWithDoctor(Patient patient, Doctor doctor) {
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-    } //запись к доктору
+    public String getHelpDeskTelephoneNumber() {
+        return helpDeskTelephoneNumber;
+    }
 
-    public static String diagnosis() {
-        return "Some diagnose";
+    public void setHelpDeskTelephoneNumber(String helpDeskTelephoneNumber) {
+        this.helpDeskTelephoneNumber = helpDeskTelephoneNumber;
+    }
+
+    public String getCallADoctorAtHomeTelephoneNumber() {
+        return callADoctorAtHomeTelephoneNumber;
+    }
+
+    public void setCallADoctorAtHomeTelephoneNumber(String callADoctorAtHomeTelephoneNumber) {
+        this.callADoctorAtHomeTelephoneNumber = callADoctorAtHomeTelephoneNumber;
+    }
+
+    public String getPaidServicesTelephoneNumber() {
+        return paidServicesTelephoneNumber;
+    }
+
+    public void setPaidServicesTelephoneNumber(String paidServicesTelephoneNumber) {
+        this.paidServicesTelephoneNumber = paidServicesTelephoneNumber;
     }
 }
