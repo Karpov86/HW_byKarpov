@@ -2,17 +2,13 @@ package by.karpov.entity;
 
 import java.util.Date;
 
-public class Doctor extends Person {
+public class Doctor extends Employees {
 
     private Specialty specialty;
-    private int workExperience;
-    private Clinic clinic;
 
-    public Doctor(String id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic, Insurance insurance, Specialty specialty, int workExperience, Clinic clinic1) {
-        super(id, name, surname, address, birthDate, sex, clinic, insurance);
+    public Doctor(String id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic, Insurance insurance, int workExperience, Specialty specialty) {
+        super(id, name, surname, address, birthDate, sex, clinic, insurance, workExperience);
         this.specialty = specialty;
-        this.workExperience = workExperience;
-        this.clinic = clinic1;
     }
 
     public Specialty getSpecialty() {
@@ -21,23 +17,5 @@ public class Doctor extends Person {
 
     public void setSpecialty(Specialty specialty) {
         this.specialty = specialty;
-    }
-
-    public int getWorkExperience() {
-        return workExperience;
-    }
-
-    public void setWorkExperience(int workExperience) {
-        this.workExperience = workExperience;
-    }
-
-    @Override
-    public Clinic getClinic() {
-        return clinic;
-    }
-
-    @Override
-    public void setClinic(Clinic clinic) {
-        this.clinic = clinic;
     }
 }

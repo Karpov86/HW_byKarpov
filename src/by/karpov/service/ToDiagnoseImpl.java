@@ -7,6 +7,7 @@ public class ToDiagnoseImpl implements ToDiagnose {
 
     @Override
     public String diagnosis(Patient patient, Doctor doctor) {
+
         String diagnose = "";
         diagnose = patient.getSurname() + " " + patient.getName() + " Some diagnose, recommendations, \n" +
                 "treatment." + doctor.getSurname() + doctor.getName();

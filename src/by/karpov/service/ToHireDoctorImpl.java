@@ -1,11 +1,15 @@
 package by.karpov.service;
 
-import by.karpov.entity.Person;
+import by.karpov.entity.Employees;
 
-public class ToHireDoctorImpl implements ToHirePersonal {
+public class ToHireDoctorImpl implements ToHireEmployees {
 
     @Override
-    public boolean ToHire(Person person) {
+    public boolean ToHire(Employees employees, int requiredWorkExperience) {
+
+        if (employees.getWorkExperience()<requiredWorkExperience){
         return false;
+        }
+        return true;
     }
 }
