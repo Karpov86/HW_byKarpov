@@ -10,3 +10,6 @@ public class CheckDateAppointmentWithDoctorImpl implements CheckDateAppointmentW
         return false;
     }
 }
+/* Может лучше создать этот метод в классе AppointmentWithDoctorImpl,
+   а не создовать для него интерфейс и класс?
+*/
