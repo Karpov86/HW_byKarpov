@@ -5,5 +5,5 @@ import by.karpov.entity.Patient;
 
 public interface ToDiagnose {
 
-    String diagnosis (Patient patient, Doctor doctor);
+    String diagnosis(Patient patient, Doctor doctor);
 }
