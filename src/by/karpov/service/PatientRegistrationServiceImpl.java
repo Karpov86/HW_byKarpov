@@ -2,7 +2,6 @@ package by.karpov.service;
 
 import by.karpov.entity.Patient;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 public class PatientRegistrationServiceImpl implements PatientRegistrationService {
@@ -10,9 +9,9 @@ public class PatientRegistrationServiceImpl implements PatientRegistrationServic
     @Override
     public boolean register(Patient patient) {
 
-        LocalDate localDate = LocalDate.now();
+        Date localDate = new Date();
         Date birthDate = patient.getBirthDate();
-        int age = birthDate.getYear() - localDate.getYear();
-        return patient.getInsurance() != null || age >= 18;
+        long age = (birthDate.getTime() - localDate.getTime()) / (24 * 60 * 60 * 1000);
+        return patient.getInsurance() != null && age >= (18 * 365 + 5) || age >= (18 * 365 + 4);
     }
 }
