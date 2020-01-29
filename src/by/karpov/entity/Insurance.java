@@ -4,21 +4,23 @@ import java.util.Date;
 
 public class Insurance {
 
-    private String id;
+    private int id;
     private Person person;
-    private Date date;
+    private Date dateOfIssue;
+    private Date expirationDate;
 
-    public Insurance(String id, Person person, Date date) {
+    public Insurance(int id, Person person, Date dateOfIssue, Date expirationDate) {
         this.id = id;
         this.person = person;
-        this.date = date;
+        this.dateOfIssue = dateOfIssue;
+        this.expirationDate = expirationDate;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -30,11 +32,19 @@ public class Insurance {
         this.person = person;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateOfIssue() {
+        return dateOfIssue;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateOfIssue(Date dateOfIssue) {
+        this.dateOfIssue = dateOfIssue;
+    }
+
+    public Date getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(Date expirationDate) {
+        this.expirationDate = expirationDate;
     }
 }

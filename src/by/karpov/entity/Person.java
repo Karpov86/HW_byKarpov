@@ -4,16 +4,15 @@ import java.util.Date;
 
 public abstract class Person {
 
-    private String id;
+    private int id;
     private String name;
     private String surname;
     private String address;
     private Date birthDate;
     private Sex sex;
     private Clinic clinic;
-    private Insurance insurance;
 
-    public Person(String id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic, Insurance insurance) {
+    public Person(int id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -21,16 +20,15 @@ public abstract class Person {
         this.birthDate = birthDate;
         this.sex = sex;
         this.clinic = clinic;
-        this.insurance = insurance;
+
     }
-//add Clinic field
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -40,14 +38,6 @@ public abstract class Person {
 
     public void setClinic(Clinic clinic) {
         this.clinic = clinic;
-    }
-
-    public Insurance getInsurance() {
-        return insurance;
-    }
-
-    public void setInsurance(Insurance insurance) {
-        this.insurance = insurance;
     }
 
     public String getName() {
