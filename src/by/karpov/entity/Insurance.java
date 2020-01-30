@@ -11,7 +11,7 @@ public class Insurance {
     public Insurance(String id, Person person, Date date) {
         this.id = id;
         this.person = person;
-        this.date = date; //добавить вторую дату
+        this.date = date;
     }
 
     public String getId() {
