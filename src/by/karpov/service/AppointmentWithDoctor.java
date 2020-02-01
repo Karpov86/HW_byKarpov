@@ -7,5 +7,5 @@ import java.util.Date;
 
 public interface AppointmentWithDoctor {
 
-    boolean appointment(Patient patient, Doctor doctor, Date date);
+    boolean appointment(Doctor doctor, Date date);
 }
