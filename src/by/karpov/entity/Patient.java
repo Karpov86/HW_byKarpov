@@ -6,8 +6,8 @@ public class Patient extends Person {
 
     private Insurance insurance;
 
-    public Patient(int id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic, Insurance insurance) {
-        super(id, name, surname, address, birthDate, sex, clinic);
+    public Patient(int id, String name, String surname, String address, Date birthDate, Sex sex, Insurance insurance) {
+        super(id, name, surname, address, birthDate, sex);
         this.insurance = insurance;
     }
 

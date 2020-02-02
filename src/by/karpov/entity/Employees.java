@@ -7,8 +7,8 @@ public abstract class Employees extends Person {
     private int workExperience;
 
 
-    public Employees(int id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic, int workExperience) {
-        super(id, name, surname, address, birthDate, sex, clinic);
+    public Employees(int id, String name, String surname, String address, Date birthDate, Sex sex, int workExperience) {
+        super(id, name, surname, address, birthDate, sex);
         this.workExperience = workExperience;
     }
 

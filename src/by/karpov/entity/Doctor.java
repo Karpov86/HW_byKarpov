@@ -6,8 +6,8 @@ public class Doctor extends Employees {
 
     private Specialty specialty;
 
-    public Doctor(int id, String name, String surname, String address, Date birthDate, Sex sex, Clinic clinic, int workExperience, Specialty specialty) {
-        super(id, name, surname, address, birthDate, sex, clinic, workExperience);
+    public Doctor(int id, String name, String surname, String address, Date birthDate, Sex sex, int workExperience, Specialty specialty) {
+        super(id, name, surname, address, birthDate, sex, workExperience);
         this.specialty = specialty;
     }
 
