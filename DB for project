@@ -57,3 +57,20 @@ PRIMARY KEY(id),
 FOREIGN KEY(patient_id)  REFERENCES patients(id),
 FOREIGN KEY(doctor_id)   REFERENCES doctors(id)
 );
+
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Tom', 'Cruse', 'LA, 1 str., 1', 1980-01-01, 'Male');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Tom', 'Hardy', 'LA, 1 str., 5', 1978-02-12, 'Male');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Leonardo', 'Dicaprio', 'LA, 3 str., 1', 1982-03-08, 'Male');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Jessica', 'Parker', 'LA, 5 str., 1', 1986-04-29, 'Female');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Eva', 'Green', 'LA, 5 str., 7', 1988-05-15, 'Female');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Emma', 'Watson', 'LA, 6 str., 1', 1990-06-20, 'Female');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Keira', 'Knightley', 'LA, 6 str., 3', 1989-07-07, 'Female');
+INSERT INTO patients (name, surname, address, birth_date, sex) VALUES ('Matthew', 'McConaughey', 'LA, 7 str., 3', 1986-08-19, 'Male');
+
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('Perry', 'Cox', 'LA, 21 str., 55', 1969-01-01, 'Male', 'THERAPIST', 20);
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('John', 'Dorian', 'LA, 33 str., 19', 1986-01-01, 'Male', 'THERAPIST', 5);
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('Christopher', 'Turk', 'LA, 33 str., 19', 1985-02-22, 'Male', 'SURGEON', 5);
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('Elliot', 'Reid', 'LA, 49 str., 7', 1987-03-02, 'Female', 'GYNECOLOGIST', 5);
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('Bob', 'Kelso', 'LA, 15 str., 2', 1955-04-30, 'Male', 'CARDIOLOGIST', 30);
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('Todd', 'Quinlan', 'LA, 78 str., 11', 1984-05-11, 'Male', 'SURGEON', 6);
+INSERT INTO doctors (name, surname, address, birth_date, sex, speciality, work_experience) VALUES ('Doug', 'Murphy', 'LA, 66 str., 6', 1986-06-25, 'Male', 'DERMATOVENEROLOGIST', 6);
