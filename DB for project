@@ -20,7 +20,7 @@ surname VARCHAR(50) NOT NULL,
 address VARCHAR(50) NOT NULL,
 birth_date DATE NOT NULL,
 sex VARCHAR(30) NOT NULL,
-specialty VARCHAR(50) NOT NULL,
+speciality VARCHAR(50) NOT NULL,
 work_experience INT NOT NULL,
 PRIMARY KEY(id)
 );
