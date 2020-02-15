@@ -1,33 +1,32 @@
 package by.karpov.entity;
 
 import java.util.Date;
+import java.util.Objects;
 
 public abstract class Person {
 
-    private int id;
+    private Long id;
     private String name;
     private String surname;
     private String address;
-    private Date birthDate;
     private Sex sex;
 
 
-    public Person(int id, String name, String surname, String address, Date birthDate, Sex sex) {
+    public Person(Long id, String name, String surname, String address, Sex sex) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.address = address;
-        this.birthDate = birthDate;
         this.sex = sex;
 
     }
 
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -55,14 +54,6 @@ public abstract class Person {
         this.address = address;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
-
     public Sex getSex() {
         return sex;
     }
@@ -72,14 +63,20 @@ public abstract class Person {
     }
 
     @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", address='" + address + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", sex=" + sex +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(id, person.id) &&
+                Objects.equals(name, person.name) &&
+                Objects.equals(surname, person.surname) &&
+                Objects.equals(address, person.address) &&
+                sex == person.sex;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, surname, address, sex);
     }
 }
 

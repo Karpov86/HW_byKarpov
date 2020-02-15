@@ -1,14 +1,15 @@
 package by.karpov.entity;
 
 import java.util.Date;
+import java.util.Objects;
 
 public abstract class Employees extends Person {
 
     private int workExperience;
 
 
-    public Employees(int id, String name, String surname, String address, Date birthDate, Sex sex, int workExperience) {
-        super(id, name, surname, address, birthDate, sex);
+    public Employees(Long id, String name, String surname, String address, Sex sex, int workExperience) {
+        super(id, name, surname, address, sex);
         this.workExperience = workExperience;
     }
 
@@ -18,5 +19,19 @@ public abstract class Employees extends Person {
 
     public void setWorkExperience(int workExperience) {
         this.workExperience = workExperience;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Employees employees = (Employees) o;
+        return workExperience == employees.workExperience;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), workExperience);
     }
 }
