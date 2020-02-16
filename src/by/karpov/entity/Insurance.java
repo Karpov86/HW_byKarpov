@@ -1,24 +1,27 @@
 package by.karpov.entity;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Insurance {
 
-    private String id;
+    private Long id;
     private Person person;
-    private Date date;
+    private Date dateFrom;
+    private Date dateTo;
 
-    public Insurance(String id, Person person, Date date) {
+    public Insurance(Long id, Person person, Date dateFrom, Date dateTo) {
         this.id = id;
         this.person = person;
-        this.date = date;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -30,11 +33,35 @@ public class Insurance {
         this.person = person;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getDateFrom() {
+        return dateFrom;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDateFrom(Date dateFrom) {
+        this.dateFrom = dateFrom;
+    }
+
+    public Date getDateTo() {
+        return dateTo;
+    }
+
+    public void setDateTo(Date dateTo) {
+        this.dateTo = dateTo;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Insurance insurance = (Insurance) o;
+        return Objects.equals(id, insurance.id) &&
+                Objects.equals(person, insurance.person) &&
+                Objects.equals(dateFrom, insurance.dateFrom) &&
+                Objects.equals(dateTo, insurance.dateTo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, person, dateFrom, dateTo);
     }
 }
