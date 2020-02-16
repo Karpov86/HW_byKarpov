@@ -1,4 +1,4 @@
-package by.karpov.transactions.dao;
+package by.karpov.transactions.Dao;
 
 import by.karpov.entity.Doctor;
 import by.karpov.transactions.connection.ConnectionManager;
@@ -82,10 +82,9 @@ public class DoctorDao {
             ResultSet resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
-                System.out.println(resultSet.getString("name") + " " + resultSet.getString("surname")
-                        + "\naddress: " + resultSet.getString("address") + "\nsex: " + resultSet.getString("sex") + ", speciality: " +
-                        resultSet.getString("speciality") + "\nwork experience " + resultSet.getInt("work_experience") + " years");
-                System.out.println("===========================================================");
+                System.out.println(resultSet.getString("name") + resultSet.getString("surname")
+                        + " : " + resultSet.getString("address") + resultSet.getString("sex") +
+                        resultSet.getString("speciality") + resultSet.getInt("work_experience"));
             }
 
             resultSet.close();
