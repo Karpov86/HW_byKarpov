@@ -6,10 +6,12 @@ public class Doctor extends Employees {
 
     private Specialty specialty;
 
-    public Doctor(Long id, String name, String surname, String address, Sex sex, int workExperience, Specialty specialty) {
-        super(id, name, surname, address, sex, workExperience);
+    public Doctor(String name, String surname, String address, Sex sex, int workExperience, Specialty specialty) {
+        super(name, surname, address, sex, workExperience);
         this.specialty = specialty;
     }
+
+
 
     public Specialty getSpecialty() {
         return specialty;

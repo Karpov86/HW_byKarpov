@@ -20,6 +20,12 @@ public abstract class Person {
 
     }
 
+    public Person(String name, String surname, String address, Sex sex) {
+        this.name = name;
+        this.surname = surname;
+        this.address = address;
+        this.sex = sex;
+    }
 
     public Long getId() {
         return id;

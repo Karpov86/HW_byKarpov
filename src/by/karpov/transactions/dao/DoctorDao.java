@@ -81,7 +81,7 @@ public class DoctorDao {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM doctors;");
             ResultSet resultSet = statement.executeQuery();
 
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 System.out.println(resultSet.getString("name") + " " + resultSet.getString("surname")
                         + "\naddress: " + resultSet.getString("address") + "\nsex: " + resultSet.getString("sex") + ", speciality: " +
                         resultSet.getString("speciality") + "\nwork experience " + resultSet.getInt("work_experience") + " years");
