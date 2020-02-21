@@ -5,18 +5,18 @@ import by.karpov.transactions.connection.ConnectionManager;
 
 import java.sql.*;
 
-public class DoctorDao {
+public class DoctorDaoImpl implements PersonDao<Doctor> {
 
-    private static DoctorDao INSTANCE;
+    private static DoctorDaoImpl INSTANCE;
 
-    private DoctorDao() {
+    private DoctorDaoImpl() {
     }
 
-    public static DoctorDao newInstance() {
+    public static DoctorDaoImpl newInstance() {
         if (INSTANCE == null) {
-            synchronized (DoctorDao.class) {
+            synchronized (DoctorDaoImpl.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new DoctorDao();
+                    INSTANCE = new DoctorDaoImpl();
                 }
             }
         }

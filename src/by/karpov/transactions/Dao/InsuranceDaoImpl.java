@@ -9,18 +9,18 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class InsuranceDao {
-    private static InsuranceDao INSTANCE;
+public class InsuranceDaoImpl implements InsuranceDao <Insurance, Patient> {
+    private static InsuranceDaoImpl INSTANCE;
 
-    private InsuranceDao() {
+    private InsuranceDaoImpl() {
     }
 
-    public static InsuranceDao newInstance() {
+    public static InsuranceDaoImpl newInstance() {
 
         if (INSTANCE == null) {
-            synchronized (InsuranceDao.class) {
+            synchronized (InsuranceDaoImpl.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new InsuranceDao();
+                    INSTANCE = new InsuranceDaoImpl();
                 }
             }
         }
@@ -43,5 +43,20 @@ public class InsuranceDao {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void read() {
+
+    }
+
+    @Override
+    public boolean update(Long id, String string) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        return false;
     }
 }

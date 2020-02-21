@@ -8,17 +8,17 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class PatientDao {
-    private static PatientDao INSTANCE;
+public class PatientDaoImpl implements PersonDao <Patient> {
+    private static PatientDaoImpl INSTANCE;
 
-    private PatientDao() {
+    private PatientDaoImpl() {
     }
 
-    public static PatientDao newInstance() {
+    public static PatientDaoImpl newInstance() {
         if (INSTANCE == null) {
-            synchronized (PatientDao.class) {
+            synchronized (PatientDaoImpl.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new PatientDao();
+                    INSTANCE = new PatientDaoImpl();
                 }
             }
         }
@@ -42,5 +42,20 @@ public class PatientDao {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void read() {
+
+    }
+
+    @Override
+    public boolean update(Long id, String string) {
+        return false;
+    }
+
+    @Override
+    public boolean delete(Long id) {
+        return false;
     }
 }
