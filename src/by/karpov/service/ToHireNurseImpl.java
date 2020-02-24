@@ -1,7 +1,5 @@
 package by.karpov.service;
 
-import by.karpov.entity.Employees;
-
 public class ToHireNurseImpl implements ToHireEmployees {
 
     @Override

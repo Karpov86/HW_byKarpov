@@ -1,27 +1,25 @@
 package by.karpov.entity;
 
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 public class Visit {
-    private long id;
+    private Long id;
     private Date date;
-    private List<Doctor> doctors = new ArrayList();
-    private List<Patient> patients = new ArrayList();
+    private Doctor doctor;
+    private Patient patient;
 
-    public Visit(long id, Date date, List<Doctor> doctors, List<Patient> patients) {
-        this.id = id;
+    public Visit(Date date, Doctor doctor, Patient patient) {
         this.date = date;
-        this.doctors = doctors;
-        this.patients = patients;
+        this.doctor = doctor;
+        this.patient = patient;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -33,19 +31,44 @@ public class Visit {
         this.date = date;
     }
 
-    public List<Doctor> getDoctors() {
-        return doctors;
+    public Doctor getDoctor() {
+        return doctor;
     }
 
-    public void setDoctors(List<Doctor> doctors) {
-        this.doctors = doctors;
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 
-    public List<Patient> getPatients() {
-        return patients;
+    public Patient getPatient() {
+        return patient;
     }
 
-    public void setPatients(List<Patient> patients) {
-        this.patients = patients;
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Visit visit = (Visit) o;
+        return Objects.equals(id, visit.id) &&
+                Objects.equals(date, visit.date) &&
+                Objects.equals(doctor, visit.doctor) &&
+                Objects.equals(patient, visit.patient);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, date, doctor, patient);
+    }
+
+    @Override
+    public String toString() {
+        return "Visit{" +
+                "id=" + id +
+                ", date=" + date +
+                ", doctor=" + doctor +
+                ", patient=" + patient +
+                '}';
     }
 }

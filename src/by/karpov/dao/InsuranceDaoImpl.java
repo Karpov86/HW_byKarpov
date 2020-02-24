@@ -1,8 +1,7 @@
-package by.karpov.transactions.dao;
+package by.karpov.dao;
 
 import by.karpov.entity.Insurance;
 import by.karpov.entity.Patient;
-import by.karpov.transactions.connection.ConnectionManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -34,7 +33,7 @@ public class InsuranceDaoImpl implements InsuranceDao <Insurance, Patient> {
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, String.valueOf(insurance.getDateFrom()));
             statement.setString(2, String.valueOf(insurance.getDateTo()));
-            statement.setLong(3, insurance.getId());
+            statement.setLong(3, patient.getId());
             statement.executeUpdate();
 
             statement.close();

@@ -1,7 +1,6 @@
-package by.karpov.transactions.dao;
+package by.karpov.dao;
 
 import by.karpov.entity.Patient;
-import by.karpov.transactions.connection.ConnectionManager;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

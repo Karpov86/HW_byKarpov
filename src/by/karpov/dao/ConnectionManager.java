@@ -1,4 +1,4 @@
-package by.karpov.transactions.connection;
+package by.karpov.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

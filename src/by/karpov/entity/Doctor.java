@@ -2,16 +2,24 @@ package by.karpov.entity;
 
 import java.util.Objects;
 
-public class Doctor extends Employees {
+public class Doctor extends Person {
 
+    private int workExperience;
     private Specialty specialty;
 
     public Doctor(String name, String surname, String address, Sex sex, int workExperience, Specialty specialty) {
-        super(name, surname, address, sex, workExperience);
+        super(name, surname, address, sex);
+        this.workExperience = workExperience;
         this.specialty = specialty;
     }
 
+    public int getWorkExperience() {
+        return workExperience;
+    }
 
+    public void setWorkExperience(int workExperience) {
+        this.workExperience = workExperience;
+    }
 
     public Specialty getSpecialty() {
         return specialty;
@@ -33,5 +41,13 @@ public class Doctor extends Employees {
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), specialty);
+    }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "workExperience=" + workExperience +
+                ", specialty=" + specialty +
+                '}';
     }
 }

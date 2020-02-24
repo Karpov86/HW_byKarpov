@@ -1,4 +1,4 @@
-package by.karpov.transactions.dao;
+package by.karpov.dao;
 
 public interface PersonDao<T> {
 

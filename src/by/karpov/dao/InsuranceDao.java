@@ -1,6 +1,6 @@
-package by.karpov.transactions.dao;
+package by.karpov.dao;
 
-public interface VisitDao <T, V> {
+public interface InsuranceDao <T, V> {
 
     boolean save(T entity1, V entity2);
     void read();
