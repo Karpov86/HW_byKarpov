@@ -49,12 +49,12 @@ public class PatientDaoImpl implements PersonDao <Patient> {
     }
 
     @Override
-    public boolean update(Long id, String string) {
+    public boolean updateAddress(Patient patient) {
         return false;
     }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean delete(Patient patient) {
         return false;
     }
 }

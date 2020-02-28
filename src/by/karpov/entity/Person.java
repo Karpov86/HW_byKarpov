@@ -27,6 +27,10 @@ public abstract class Person {
         this.sex = sex;
     }
 
+    public Person(){
+
+    }
+
     public Long getId() {
         return id;
     }

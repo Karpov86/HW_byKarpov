@@ -43,12 +43,12 @@ public class DoctorDaoImpl implements PersonDao<Doctor> {
         return true;
     }
 
-    public boolean update(Long id, String newAddress) {
+    public boolean updateAddress(Doctor doctor) {
 
         try (Connection connection = ConnectionManager.newConnection()) {
             PreparedStatement statement = connection.prepareStatement("UPDATE doctors SET address = ? WHERE id = ?;");
-            statement.setString(1, newAddress);
-            statement.setLong(2, id);
+            statement.setString(1, new Doctor().getAddress());
+            statement.setLong(2, doctor.getId());
             statement.executeUpdate();
 
             statement.close();
@@ -59,11 +59,11 @@ public class DoctorDaoImpl implements PersonDao<Doctor> {
         return true;
     }
 
-    public boolean delete(Long id) {
+    public boolean delete(Doctor doctor) {
 
         try (Connection connection = ConnectionManager.newConnection()) {
             PreparedStatement statement = connection.prepareStatement("DELETE FROM doctors WHERE id = ?;");
-            statement.setLong(1, id);
+            statement.setLong(1, doctor.getId());
             statement.executeUpdate();
 
             statement.close();

@@ -13,6 +13,10 @@ public class Doctor extends Person {
         this.specialty = specialty;
     }
 
+    public Doctor() {
+
+    }
+
     public int getWorkExperience() {
         return workExperience;
     }

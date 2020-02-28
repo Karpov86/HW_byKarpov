@@ -50,12 +50,12 @@ public class InsuranceDaoImpl implements InsuranceDao <Insurance, Patient> {
     }
 
     @Override
-    public boolean update(Long id, String string) {
+    public boolean update(Patient patient) {
         return false;
     }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean delete(Patient patient) {
         return false;
     }
 }

@@ -52,12 +52,12 @@ public class VisitDaoImpl implements VisitDao <Doctor, Patient, Visit> {
     }
 
     @Override
-    public boolean update(Long id, String string) {
+    public boolean update(Visit visit) {
         return false;
     }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean delete(Visit visit) {
         return false;
     }
 }

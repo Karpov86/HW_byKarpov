@@ -4,6 +4,6 @@ public interface PersonDao<T> {
 
     boolean save(T entity);
     void read();
-    boolean update(Long id, String string);
-    boolean delete(Long id);
+    boolean updateAddress(T entity);
+    boolean delete(T entity);
 }
